@@ -1,0 +1,1 @@
+# inf-ter-ops-rabbitmq-shovel-lambda

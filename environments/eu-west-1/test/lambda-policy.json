@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowTravis",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::319701921293:user/terraform_infra",
+                    "arn:aws:iam::319701921293:user/travis-ci.com",
+                    "arn:aws:iam::319701921293:role/ecloud-test-devops"
+                ]
+            },
+            "Action": [
+                "s3:Put*",
+                "s3:List*",
+                "s3:Get*",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::awie-s3-ec-core-int-lambda-ops-rabbitmq-shovel-repository-01/*",
+                "arn:aws:s3:::awie-s3-ec-core-int-lambda-ops-rabbitmq-shovel-repository-01"
+            ]
+        }
+    ]
+}
